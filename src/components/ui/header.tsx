@@ -10,7 +10,7 @@ function Header() {
       borderColor="fg.subtle"
       fluid
     >
-      <Container justifyItems="end">
+      <Container display="flex" justifyContent="end">
         <nav>
           <HStack separator={<Separator />}>
             <b>ADD LINKS</b>

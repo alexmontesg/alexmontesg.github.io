@@ -24,7 +24,7 @@ function Hero() {
       </GridItem>
       <GridItem
         order={{ base: "0", md: "1" }}
-        justifyItems={{ base: "center", md: "end" }}
+        justifySelf={{ base: "center", md: "end" }}
       >
         <Image
           src="./alejandro-montes.webp"

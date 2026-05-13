@@ -19,8 +19,9 @@ function SocialLinkContent(props: Exclude<SocialLinkProps, "href">) {
         borderRadius="full"
         w="75px"
         h="75px"
-        alignContent="center"
-        justifyItems="center"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
         <props.Icon size="25" />
       </Box>
