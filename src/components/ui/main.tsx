@@ -2,6 +2,7 @@ import { Container, Separator, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
 import Hero from "../home/hero";
+import Projects from "../home/projects";
 
 function Main() {
   return (
@@ -14,6 +15,7 @@ function Main() {
         marginInline="auto"
       >
         <Hero />
+        <Projects />
       </VStack>
     </Container>
   );
