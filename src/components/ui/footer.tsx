@@ -10,6 +10,7 @@ function Footer() {
   return (
     <Container
       as="footer"
+      id="get-in-touch"
       py="5"
       borderBlockStart="1px solid"
       borderColor="fg.subtle"
@@ -18,7 +19,7 @@ function Footer() {
       <Container>
         <VStack gap="8" w="full">
           <Heading as="h3" size="2xl">
-            Get in touch
+            Get in Touch
           </Heading>
 
           <Container as="nav">

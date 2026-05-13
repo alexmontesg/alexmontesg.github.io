@@ -1,4 +1,4 @@
-import { Container, HStack, Separator } from "@chakra-ui/react";
+import { Container, HStack, Link, Separator } from "@chakra-ui/react";
 import { memo } from "react";
 
 function Header() {
@@ -13,7 +13,8 @@ function Header() {
       <Container display="flex" justifyContent="end">
         <nav>
           <HStack separator={<Separator />}>
-            <b>ADD LINKS</b>
+            <Link href="#selected-projects">Projects</Link>
+            <Link href="#get-in-touch">Contact</Link>
           </HStack>
         </nav>
       </Container>

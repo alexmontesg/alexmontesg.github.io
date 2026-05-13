@@ -8,7 +8,7 @@ function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {
   const projects = projectRepo.getAll();
 
   return (
-    <VStack gap="8">
+    <VStack id="selected-projects" gap="8">
       <Heading as="h3" size="2xl">
         Selected Projects
       </Heading>
