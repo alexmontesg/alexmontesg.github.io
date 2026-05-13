@@ -1,18 +1,8 @@
 import { memo } from "react";
 import { Badge, Box, Card, Flex, Link, Text } from "@chakra-ui/react";
+import type { Project } from "../../domain/project";
 
-export type ProjectProps = {
-  title: string;
-  role: {
-    title: string;
-    description: string;
-  };
-  description: string;
-  url?: string;
-  technologies: Set<string>;
-};
-
-function Project(props: ProjectProps) {
+function Project(props: Project) {
   const technologies = [...props.technologies];
 
   return (
@@ -20,8 +10,11 @@ function Project(props: ProjectProps) {
       width={{ base: "100%", md: "380px" }}
       size={{ base: "sm", md: "md" }}
       h="100%"
+      as="article"
+      display={{ md: "grid" }}
+      gridTemplateRows="125px 1fr 125px"
     >
-      <Card.Header>
+      <Card.Header as="header">
         <Card.Title as="h4" fontSize="xl">
           {props.title}
         </Card.Title>
@@ -35,8 +28,8 @@ function Project(props: ProjectProps) {
         )}
       </Card.Header>
       <Card.Body>
-        <Card.Description>
-          <Text mb="4" lineHeight="short">
+        <Card.Description as="div">
+          <Text mb="4" lineHeight="short" minH={{ md: "175px" }}>
             {props.description}
           </Text>
           <Box
@@ -54,7 +47,7 @@ function Project(props: ProjectProps) {
           </Box>
         </Card.Description>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer as="footer" alignItems="start">
         <Flex gap="2" wrap="wrap">
           {technologies.map((t) => {
             return (

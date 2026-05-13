@@ -2,38 +2,10 @@ import { memo } from "react";
 import Project from "../projects/project";
 import { Carousel, Heading, IconButton, VStack } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
-const projects = [
-  {
-    title: "Roshn Saudi League x Flight Pass",
-    role: {
-      title: "Delivery Lead",
-      description:
-        "I led the full-stack delivery, customizing a core product to align with Saudia's specific business logic and high-traffic performance needs.",
-    },
-    description:
-      "The Saudia Flight Pass is a specialized travel subscription designed for football fans to follow the Roshn Saudi League across the Kingdom at fixed, competitive rates. It offers flexible domestic travel between match cities with the choice of quarterly or yearly plans, ensuring supporters never miss a game.",
-    technologies: new Set(["Vue.js", "PHP", "Laravel"]),
-    url: "https://rsl.saudia.com/sv/subscriptions",
-  },
-  {
-    title: "Kris: eDreams AI Chatbot",
-    role: {
-      title: "Tech Lead",
-      description:
-        "I led the technical architecture and implemented the core integrations between the chatbot eDreams and Genesys APIs, ensuring reliable, real-time data flow for seamless self-service.",
-    },
-    description:
-      "Kris is an intelligent AI assistant built for eDreams ODIGEO and all its brands to automate global customer support. It streamlines the travel experience by managing bookings, providing real-time flight updates, and resolving inquiries for millions of users worldwide.",
-    technologies: new Set([
-      "Node.js",
-      "Dialogflow",
-      "Botkit",
-      "NLP",
-      "Artificial Intelligence",
-      "Java",
-    ]),
-  },
-];
+import { InMemoryProjectRepository } from "../../repositories/project-repository";
+
+const projectRepo = new InMemoryProjectRepository();
+const projects = projectRepo.getAll();
 
 function Projects() {
   return (
@@ -45,7 +17,7 @@ function Projects() {
         slideCount={projects.length}
         autoSize
         spacing="60px"
-        maxW={{ base: "sm", md: "6xl" }}
+        maxW={{ base: "md", md: "6xl" }}
         mx="auto"
         gap="4"
       >
