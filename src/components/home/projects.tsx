@@ -2,12 +2,11 @@ import { memo } from "react";
 import Project from "../projects/project";
 import { Carousel, Heading, IconButton, VStack } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
-import { InMemoryProjectRepository } from "../../repositories/project-repository";
+import type { ProjectRepository } from "@/domain/project";
 
-const projectRepo = new InMemoryProjectRepository();
-const projects = projectRepo.getAll();
+function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {
+  const projects = projectRepo.getAll();
 
-function Projects() {
   return (
     <VStack gap="8">
       <Heading as="h3" size="2xl">
@@ -17,7 +16,7 @@ function Projects() {
         slideCount={projects.length}
         autoSize
         spacing="60px"
-        maxW={{ base: "md", md: "6xl" }}
+        maxW={{ base: "md", md: "2xl", lg: "4xl", xl: "6xl" }}
         mx="auto"
         gap="4"
       >

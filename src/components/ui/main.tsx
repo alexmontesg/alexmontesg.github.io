@@ -3,6 +3,9 @@ import { memo } from "react";
 
 import Hero from "../home/hero";
 import Projects from "../home/projects";
+import { InMemoryProjectRepository } from "@/repositories/project-repository";
+
+const projectRepo = new InMemoryProjectRepository();
 
 function Main() {
   return (
@@ -14,8 +17,8 @@ function Main() {
         maxW="8xl"
         marginInline="auto"
       >
-        <Hero />
-        <Projects />
+        <Hero projectRepo={projectRepo} />
+        <Projects projectRepo={projectRepo} />
       </VStack>
     </Container>
   );
