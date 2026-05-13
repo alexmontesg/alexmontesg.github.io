@@ -13,12 +13,12 @@ function Hero() {
             PhD | Fullstack Engineer | Technical Lead
           </Heading>
           <Text textStyle="lg" color="gray.fg" fontWeight="medium">
-            Senior Front-End and Full-Stack Engineer with 8+ years building
-            scalable, user-focused web applications. I combine strong product
-            thinking, AI expertise, and hands-on leadership to deliver fast,
-            maintainable solutions. From adaptive systems research to AI-powered
-            products, I focus on creating impactful digital experiences that
-            balance performance, usability, and long-term scalability.
+            Senior Fullstack Engineer with 8+ years building scalable,
+            user-focused web applications. I combine strong product thinking, AI
+            expertise, and hands-on leadership to deliver fast, maintainable
+            solutions. From adaptive systems research to AI-powered products, I
+            focus on creating impactful digital experiences that balance
+            performance, usability, and long-term scalability.
           </Text>
         </VStack>
       </GridItem>
