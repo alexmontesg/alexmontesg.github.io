@@ -22,7 +22,7 @@ function Footer() {
           </Heading>
 
           <Container as="nav">
-            <HStack justifyContent="space-around">
+            <HStack justifyContent="space-around" alignItems="start">
               <SocialLink Icon={FaMapMarkerAlt} text="Gijón, Spain" />
 
               <SocialLink

@@ -29,7 +29,7 @@ function SocialLinkContent(props: Exclude<SocialLinkProps, "href">) {
         {props.text}
       </Text>
       {props.subtitle && (
-        <Text fontSize="xs" color="fg.subtle">
+        <Text fontSize="xs" color="fg.muted">
           {props.subtitle}
         </Text>
       )}
