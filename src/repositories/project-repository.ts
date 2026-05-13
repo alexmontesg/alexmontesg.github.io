@@ -80,7 +80,7 @@ export class InMemoryProjectRepository extends BaseProjectRepository {
         "Project Management",
         "Team Leadership",
       ]),
-      url: "https://multipass.wizzair.com/w6/subscriptions",
+      url: "https://go.jetsmart.com/",
     },
     {
       title: "Kris: eDreams AI Chatbot",
