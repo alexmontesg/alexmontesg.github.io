@@ -1,8 +1,8 @@
 import { Grid, GridItem, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
-import TypewriterComponent from "typewriter-effect";
 import type { ProjectRepository } from "@/domain/project";
+import { Typewriter } from "./typewriter";
 
 function Hero({ projectRepo }: { projectRepo: ProjectRepository }) {
   const skills = projectRepo.getAllTechnologies();
@@ -26,22 +26,15 @@ function Hero({ projectRepo }: { projectRepo: ProjectRepository }) {
             performance, usability, and long-term scalability.
           </Text>
 
-          <Text
-            fontSize={{ base: "md", md: "xl" }}
-            fontWeight="bold"
-            color="blue.fg"
-          >
-            Specialized in:{" "}
-            <TypewriterComponent
-              component="span"
-              options={{
-                autoStart: true,
-                loop: true,
-                strings: skills,
-                delay: 40,
-              }}
-            />
-          </Text>
+          <Typewriter
+            component="span"
+            options={{
+              autoStart: true,
+              loop: true,
+              strings: skills,
+              delay: 40,
+            }}
+          />
         </VStack>
       </GridItem>
       <GridItem
