@@ -1,12 +1,16 @@
 import { Container, Heading, HStack, VStack } from "@chakra-ui/react";
 import { memo } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 import SocialLink from "../navigation/social-link";
+import type { SocialLinkRepository } from "@/domain/social-link";
 
-function Footer() {
+function Footer({
+  socialLinkRepository,
+}: {
+  socialLinkRepository: SocialLinkRepository;
+}) {
+  const socialLinks = socialLinkRepository.getAll();
+
   return (
     <Container
       as="footer"
@@ -24,21 +28,9 @@ function Footer() {
 
           <Container as="nav">
             <HStack justifyContent="space-around" alignItems="start">
-              <SocialLink Icon={FaMapMarkerAlt} text="Gijón, Spain" />
-
-              <SocialLink
-                Icon={FaLinkedinIn}
-                href="https://www.linkedin.com/in/alejandromontesg/"
-                text="LinkedIn"
-                subtitle="@alejandromontesg"
-              />
-
-              <SocialLink
-                Icon={FaGithub}
-                href="https://github.com/alexmontesg"
-                text="Github"
-                subtitle="@alexmontesg"
-              />
+              {socialLinks.map((l) => {
+                return <SocialLink {...l} key={l.text} />;
+              })}
             </HStack>
           </Container>
         </VStack>

@@ -4,8 +4,11 @@ import { VStack } from "@chakra-ui/react";
 import Footer from "./components/ui/footer";
 import Header from "./components/ui/header";
 import Main from "./components/ui/main";
+import { InMemorySocialLinkRepository } from "./repositories/social-link-repository";
 
-const Demo = () => {
+const App = () => {
+  const socialLinkRepository = new InMemorySocialLinkRepository();
+
   return (
     <VStack
       gap="10"
@@ -15,9 +18,9 @@ const Demo = () => {
     >
       <Header />
       <Main />
-      <Footer />
+      <Footer socialLinkRepository={socialLinkRepository} />
     </VStack>
   );
 };
 
-export default memo(Demo);
+export default memo(App);

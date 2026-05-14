@@ -1,15 +1,8 @@
 import { Box, Text, VStack } from "@chakra-ui/react";
 import { memo } from "react";
-import type { IconType } from "react-icons";
+import type { SocialLink } from "@/domain/social-link";
 
-type SocialLinkProps = {
-  href?: string;
-  Icon: IconType;
-  text: string;
-  subtitle?: string;
-};
-
-function SocialLinkContent(props: Exclude<SocialLinkProps, "href">) {
+function SocialLinkContent(props: Exclude<SocialLink, "href">) {
   return (
     <VStack gap="2">
       <Box
@@ -28,16 +21,16 @@ function SocialLinkContent(props: Exclude<SocialLinkProps, "href">) {
       <Text fontSize="sm" color="gray.fg">
         {props.text}
       </Text>
-      {props.subtitle && (
+      {props.subtitle ? (
         <Text fontSize="xs" color="fg.muted">
           {props.subtitle}
         </Text>
-      )}
+      ) : null}
     </VStack>
   );
 }
 
-function SocialLink(props: SocialLinkProps) {
+function SocialLink(props: SocialLink) {
   if (props.href) {
     return (
       <a href={props.href} target="_blank">

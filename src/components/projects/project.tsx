@@ -21,11 +21,11 @@ function Project(props: Project) {
         <Card.Title as="h5" color="blue.fg" fontSize="md">
           {props.role.title}
         </Card.Title>
-        {props.url && (
+        {props.url ? (
           <Link target="_blank" href={props.url} fontSize="xs">
             {props.url}
           </Link>
-        )}
+        ) : null}
       </Card.Header>
       <Card.Body>
         <Card.Description as="div">
