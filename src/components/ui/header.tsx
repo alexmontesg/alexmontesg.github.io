@@ -14,6 +14,7 @@ function Header() {
         <nav>
           <HStack separator={<Separator />}>
             <Link href="#selected-projects">Projects</Link>
+            <Link href="#experience">Experience</Link>
             <Link href="#get-in-touch">Contact</Link>
           </HStack>
         </nav>

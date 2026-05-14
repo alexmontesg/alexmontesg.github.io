@@ -1,11 +1,14 @@
 import { Container, Separator, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
+import Experience from "@/components/home/experience";
 import Hero from "@/components/home/hero";
 import Projects from "@/components/home/projects";
+import { InMemoryExperienceRepository } from "@/repositories/experience-repository";
 import { InMemoryProjectRepository } from "@/repositories/project-repository";
 
 const projectRepo = new InMemoryProjectRepository();
+const experienceRepo = new InMemoryExperienceRepository();
 
 function Main() {
   return (
@@ -19,6 +22,7 @@ function Main() {
       >
         <Hero projectRepo={projectRepo} />
         <Projects projectRepo={projectRepo} />
+        <Experience experienceRepo={experienceRepo} />
       </VStack>
     </Container>
   );
