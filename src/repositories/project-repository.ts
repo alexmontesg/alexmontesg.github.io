@@ -1,5 +1,5 @@
-import type { Project } from "../domain/project";
-import { BaseProjectRepository } from "../domain/project";
+import type { Project } from "@/domain/project";
+import { BaseProjectRepository } from "@/domain/project";
 
 export class InMemoryProjectRepository extends BaseProjectRepository {
   private projects: Project[] = [

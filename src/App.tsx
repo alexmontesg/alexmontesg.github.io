@@ -1,10 +1,10 @@
 import { memo } from "react";
 import { VStack } from "@chakra-ui/react";
 
-import Footer from "./components/ui/footer";
-import Header from "./components/ui/header";
-import Main from "./components/ui/main";
-import { InMemorySocialLinkRepository } from "./repositories/social-link-repository";
+import Footer from "@/components/ui/footer";
+import Header from "@/components/ui/header";
+import Main from "@/components/ui/main";
+import { InMemorySocialLinkRepository } from "@/repositories/social-link-repository";
 
 const App = () => {
   const socialLinkRepository = new InMemorySocialLinkRepository();

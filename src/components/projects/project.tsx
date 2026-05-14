@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Badge, Box, Card, Flex, Link, Text } from "@chakra-ui/react";
-import type { Project } from "../../domain/project";
+import type { Project } from "@/domain/project";
 
 function Project(props: Project) {
   const technologies = [...props.technologies];

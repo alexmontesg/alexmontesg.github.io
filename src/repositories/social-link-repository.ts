@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedinIn, FaMapMarker } from "react-icons/fa";
 import {
   BaseSocialLinkRepository,
   type SocialLink,
-} from "../domain/social-link";
+} from "@/domain/social-link";
 
 export class InMemorySocialLinkRepository extends BaseSocialLinkRepository {
   private links: SocialLink[] = [

@@ -1,8 +1,8 @@
 import { Container, Separator, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
-import Hero from "../home/hero";
-import Projects from "../home/projects";
+import Hero from "@/components/home/hero";
+import Projects from "@/components/home/projects";
 import { InMemoryProjectRepository } from "@/repositories/project-repository";
 
 const projectRepo = new InMemoryProjectRepository();

@@ -1,7 +1,8 @@
 import { memo } from "react";
-import Project from "../projects/project";
 import { Carousel, Heading, IconButton, VStack } from "@chakra-ui/react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+
+import Project from "@/components/projects/project";
 import type { ProjectRepository } from "@/domain/project";
 
 function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {

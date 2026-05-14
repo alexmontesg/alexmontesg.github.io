@@ -1,7 +1,7 @@
 import { Container, Heading, HStack, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
-import SocialLink from "../navigation/social-link";
+import SocialLink from "@/components/navigation/social-link";
 import type { SocialLinkRepository } from "@/domain/social-link";
 
 function Footer({
