@@ -14,7 +14,7 @@ function Main() {
   return (
     <Container as="main" fluid alignSelf="start">
       <VStack
-        gap="8"
+        gap={{ base: "8", md: "14" }}
         separator={<Separator />}
         paddingInline={{ base: "2", md: "8" }}
         maxW="8xl"
