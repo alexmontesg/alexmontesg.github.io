@@ -1,6 +1,7 @@
 import { Container, Separator, VStack } from "@chakra-ui/react";
 import { memo } from "react";
 
+import AboutMe from "@/components/home/about-me";
 import Experience from "@/components/home/experience";
 import Hero from "@/components/home/hero";
 import Projects from "@/components/home/projects";
@@ -23,6 +24,7 @@ function Main() {
         <Hero projectRepo={projectRepo} />
         <Projects projectRepo={projectRepo} />
         <Experience experienceRepo={experienceRepo} />
+        <AboutMe />
       </VStack>
     </Container>
   );

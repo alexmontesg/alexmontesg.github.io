@@ -16,6 +16,7 @@ function Header() {
             <Link href="#selected-projects">Projects</Link>
             <Link href="#experience">Experience</Link>
             <Link href="#get-in-touch">Contact</Link>
+            <Link href="#about-me">About</Link>
           </HStack>
         </nav>
       </Container>

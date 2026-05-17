@@ -43,9 +43,9 @@ function Hero({ projectRepo }: { projectRepo: ProjectRepository }) {
       >
         <Image
           src="./alejandro-montes.webp"
-          borderRadius="md"
+          rounded="md"
           alt="An image of Alejandro Montes García"
-          width={{ base: "300px", md: "unset" }}
+          width={{ base: "300px", md: "480px" }}
         />
       </GridItem>
     </Grid>

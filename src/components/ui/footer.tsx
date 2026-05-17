@@ -16,6 +16,7 @@ function Footer({
       as="footer"
       id="get-in-touch"
       py="5"
+      my="5"
       borderBlockStart="1px solid"
       borderColor="fg.subtle"
       fluid
