@@ -98,6 +98,8 @@ export class InMemoryProjectRepository extends BaseProjectRepository {
         "NLP",
         "Artificial Intelligence",
         "Java",
+        "Express.js",
+        "React",
       ]),
     },
     {
@@ -116,6 +118,8 @@ export class InMemoryProjectRepository extends BaseProjectRepository {
         "NLP",
         "Artificial Intelligence",
         "Java",
+        "Express.js",
+        "React",
       ]),
     },
     {
