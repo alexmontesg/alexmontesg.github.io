@@ -8,6 +8,13 @@ import type { ProjectRepository } from "@/domain/project";
 
 function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {
   const projects = projectRepo.getAll();
+  const gradient = `linear-gradient(
+    to right,
+    transparent,
+    var(--chakra-colors-bg) var(--chakra-spacing-8),
+    var(--chakra-colors-bg) calc(100% - var(--chakra-spacing-8)),
+    transparent
+  )`;
 
   return (
     <HomeSection id="selected-projects">
@@ -19,7 +26,6 @@ function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {
           spacing="60px"
           maxW={{ base: "md", md: "2xl", lg: "4xl", xl: "6xl" }}
           mx="auto"
-          gap="4"
         >
           <Carousel.Control gap="4">
             <Carousel.PrevTrigger asChild>
@@ -28,7 +34,10 @@ function Projects({ projectRepo }: { projectRepo: ProjectRepository }) {
               </IconButton>
             </Carousel.PrevTrigger>
 
-            <Carousel.ItemGroup>
+            <Carousel.ItemGroup
+              px={{ base: "0", md: "6" }}
+              maskImage={{ base: "0", md: gradient }}
+            >
               {projects.map((p, idx) => {
                 return (
                   <Carousel.Item
