@@ -10,6 +10,9 @@ function Experience({
   experienceRepo: ExperienceRepository;
 }) {
   const experience = experienceRepo.getAll();
+  const EmptyContent = (
+    <Timeline.Content flex="1" display={{ mdDown: "none" }} />
+  );
 
   return (
     <HomeSection id="experience">
@@ -17,9 +20,6 @@ function Experience({
       <HomeSection.Content>
         <Timeline.Root size="lg" variant="subtle" maxW="5xl">
           {experience.map((e, idx) => {
-            const EmptyContent = (
-              <Timeline.Content flex="1" display={{ mdDown: "none" }} />
-            );
             const ContentBody = (
               <>
                 <Timeline.Title>
