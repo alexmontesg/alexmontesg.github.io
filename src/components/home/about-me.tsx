@@ -16,6 +16,7 @@ function AboutMe() {
               rounded="md"
               alt="An image of Alejandro Montes García"
               width={{ base: "300px", md: "400px" }}
+              height={{ base: "300px", md: "400px" }}
             />
           </GridItem>
           <GridItem>

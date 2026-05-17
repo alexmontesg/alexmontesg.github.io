@@ -42,10 +42,11 @@ function Hero({ projectRepo }: { projectRepo: ProjectRepository }) {
         justifySelf={{ base: "center", md: "end" }}
       >
         <Image
-          src="./alejandro-montes.webp"
+          src="./hero.webp"
           rounded="md"
           alt="An image of Alejandro Montes García"
           width={{ base: "300px", md: "480px" }}
+          height={{ base: "300px", md: "480px" }}
         />
       </GridItem>
     </Grid>
